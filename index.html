@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Amimated Nav</title>
+</head>
+
+<body>
+    <i id="arrow" class="fa-solid fa-angles-down"></i>
+    <i id="bar-icon" onclick="showNav()" class="fa-solid fa-bars"></i>
+
+
+    <nav id="nav">
+
+        <span><i class="fa-solid fa-house"></i><small>Home</small></span>
+        <span><i class="fa-regular fa-user"></i><small>profile</small></span>
+        <span><i class="fa-regular fa-comment"></i><small>media</small></span>
+        <span><i class="fa-solid fa-wifi"></i><small>wi-fi</small></span>
+        <span><i class="fa-solid fa-ellipsis"></i><small>more</small></span>
+
+    </nav>
+
+
+    <i id="exit-icon" onclick="hideNav()" class="fa-solid fa-xmark"></i>
+
+
+    <script>
+        const bar = document.getElementById("bar-icon");
+        const navbar = document.getElementById("nav");
+        const exit = document.getElementById("exit-icon");
+        const arrow = document.getElementById("arrow");
+
+        const showNav = () => {
+            navbar.style.display = "flex";
+            exit.style.display = "inline-block";
+            bar.style.display = "none";
+            arrow.style.display = "none"
+        }
+        const hideNav = () => {
+            navbar.style.display = "none";
+            exit.style.display = "none";
+            bar.style.display = "inline-block";
+            arrow.style.display = "inline-block"
+        }
+
+    </script>
+</body>
+
+</html>
